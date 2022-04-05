@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --main-color:black;
+  --second-color:white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.gradient{
+  background-image: linear-gradient(to left,#C65DE8,#B672FF);
+}
+div.center_box{
+  width: 70vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 2rem;
+  overflow: hidden;
+  font-size:2.5rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: var(--light-shadow);
+}
+div.center_box div.top{
+  padding:2rem 1.5rem;
+  height: 80px;
+  font-size:2.3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+/* div.center_box div.top button.back{
+
+} */
+div.center_box div.top button.back i{
+  transform: rotate(90deg);
+  margin-right: 0.3rem;
+}
+div.center_box div.top p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+div.center_box form{
+  padding:1rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+}
+div.center_box form h2{
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+.btn{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-image: linear-gradient(to left,#C65DE8,#B672FF);
+  border:none;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding:0.4rem 1rem;
+  cursor: pointer;
+  box-shadow: var(--light-shadow);
+  background-color: #FF66F7;
+  transition: 0.2s ease-in-out;
+}
+.btn_light{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  border:none;
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right,#f85af0,#c871e6);
+  border-radius: 1rem;
+  padding:0.4rem 1rem;
+  cursor: pointer;
+  box-shadow: var(--light-shadow);
+  transition: 0.2s ease-in-out;
+  background-color: #f775f0;
+  font-weight: 500;
+}
+.btn_light:hover{
+      transition: 0.2s ease-in-out;
+      transform: translateY(-2%);
+      background-image: none
+}
+.btn:hover{
+  transition: 0.2s ease-in-out;
+  transform: translateY(-2%);
+  background-image: none
+}
+div.center_box form button{
+  margin-top: 2rem;
+  transition: 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+div.center_box form label{
+  max-width: 70%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 1.8rem;
+  text-align: center;
+  font-size:1.6rem;
+  font-weight: 500;
+}
+div.center_box form label.date{
+  align-self: center;
+}
+div.center_box form label.date input{
+  width: 100%;
+}
+div.center_box form textarea{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 3px #7A5DE8 solid;
+  border-radius: 0.7rem;
+  box-shadow: var(--light-shadow);
+  text-align: center;
+  flex-basis: 100%;
+  transition: 0.2s ease-in-out;
+  font-size: 1.2rem;
+  max-width: 250px;
+  padding:0.5rem 0.2rem;
+  max-height: 200px;
+}
+div.center_box form textarea:focus{
+  border: 3px #FF66F7 solid;
+  transition: 0.2s ease-in-out;
+  outline: none;
+
+}
+div.center_box form input{
+  margin-top: 0.5rem;
+  border: 3px #7A5DE8 solid;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  max-width: 250px;
+  padding:0.5rem 0.2rem;
+  box-shadow: var(--light-shadow);
+  text-align: center;
+  flex-basis: 100%;
+  transition: 0.2s ease-in-out;
+}
+div.center_box form input:focus{
+  border: 3px #FF66F7 solid;
+  transition: 0.2s ease-in-out;
+  outline: none;
+}
+div.center_box form button:hover{
+  transition: 0.2s ease-in-out;
+  transform: translateY(-2%);
+  background-image: none;
+}
+
