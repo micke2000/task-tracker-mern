@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b44de5aee5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="center_box">
         <div class="top gradient">
-            <p>Task Tracker</p>
+            <button type="submit" class="btn_light back"><i class="fa-solid fa-arrow-down"></i>Back</button>
         </div>
         <form action="#">
-            <h2>Log in</h2>
-            <label for="username"><input type="text" name="username" placeholder="Username"></label>
-            <label for="username"><input type="text" name="username" placeholder="Password"></label>
-            <button type="submit" class="btn">Log in</button>
+            <h2>Add task</h2>
+            <label for="name"><input type="text" name="name" placeholder="Name"></label>
+            <label for="desc"><textarea name="desc" id="" cols="30" rows="10" placeholder="Task description"></textarea></label>
+            <label for="deadline" class="date">Task deadline:<input type="date" name="deadline"></label>
+            <button type="submit" class="btn">Add</button>
         </form>
     </div>
 </body>
