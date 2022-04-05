@@ -1,0 +1,15 @@
+Baza schemy
+
+User:
+- id 
+- nazwa
+- email
+- haslo
+
+Taski:
+- id
+- id usera
+- nazwa
+- status
+- deadline (opc)
+
