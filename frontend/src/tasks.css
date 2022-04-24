@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    --main-color: black;
+    --second-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+.gradient {
+    background-image: linear-gradient(to left, #C65DE8, #B672FF);
+}
+
+.btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-image: linear-gradient(to left, #C65DE8, #B672FF);
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    box-shadow: var(--light-shadow);
+    background-color: #FF66F7;
+    transition: 0.2s ease-in-out;
+}
+
+.btn_light {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, #f85af0, #c871e6);
+    border-radius: 1rem;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    box-shadow: var(--light-shadow);
+    transition: 0.2s ease-in-out;
+    background-color: #f775f0;
+    font-weight: 500;
+}
+
+.btn_light:hover {
+    transition: 0.2s ease-in-out;
+    transform: translateY(-2%);
+    background-image: none
+}
+
+.btn:hover {
+    transition: 0.2s ease-in-out;
+    transform: translateY(-2%);
+    background-image: none
+}
+
+div.center_box.dashboard {
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: var(--light-shadow);
+}
+
+div.center_box.dashboard div.top {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    height: 5rem;
+    color: white;
+}
+
+div.center_box.dashboard div.top .text {
+    display: flex;
+}
+
+div.center_box.dashboard div.top p.name {
+    font-weight: 700;
+    margin-right: 0.4rem;
+    margin-left: 0.3rem;
+}
+
+
+div.center_box.dashboard div.tasks {
+    padding: 1.5rem 2rem;
+    overflow-y: scroll;
+    max-height: 80vh;
+}
+
+div.center_box.dashboard div.tasks button {
+    margin-bottom: 1.2rem;
+}
+
+div.center_box.dashboard div.tasks p.date {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+div.center_box.dashboard div.tasks p.desc {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+div.center_box.dashboard div.tasks h2.no-tasks {
+    text-align: center;
+}
+
+div.center_box.dashboard div.tasks div.task {
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #fdd6fb;
+    border-radius: 1rem;
+    box-shadow: var(--light-shadow);
+    position: relative;
+}
+
+div.center_box.dashboard div.tasks div.task.off p.desc {
+    transition: 0;
+    height: 0;
+    opacity: 0;
+}
+
+div.center_box.dashboard div.tasks div.task.off svg.arrow {
+    transition: 0.3s ease-in;
+    transform: rotate(0deg);
+}
+
+div.center_box.dashboard div.tasks div.task p.desc {
+    transition: 0.2s ease-in;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+div.center_box.dashboard div.tasks div.task h3 {
+    font-size: 1.5rem;
+}
+
+div.center_box.dashboard div.tasks div.task svg.arrow {
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.5rem;
+    transition: 0.3s ease-in;
+    transform: rotate(-180deg);
+}
+
+div.center_box.dashboard div.tasks div.task div.icons {
+    position: absolute;
+    bottom: 10%;
+    right: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.center_box.dashboard div.tasks div.task svg {
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: 0.3s ease-in;
+    margin-right: 1rem;
+}
+
+div.center_box.dashboard div.tasks div.task p.date {
+    position: absolute;
+    top: 10%;
+    right: 3%;
+}
+
+div.center_box.dashboard div.tasks div.task svg.arrow:hover {
+    transition: 0.2s ease-in;
+    bottom: 12%;
+}
+
+div.center_box.dashboard div.tasks div.task div.icons svg:hover {
+    transition: 0.1s ease-in;
+    color: rgb(102, 102, 102);
+}
+
+div.center_box.dashboard div.tasks div.task.off svg.arrow:hover {
+    transition: 0.2s ease-in;
+    bottom: 8%;
+}
+
+/* div.center_box.dashboard div.tasks div.task:nth-of-type(2){
+    opacity: 0.4;
+} */
