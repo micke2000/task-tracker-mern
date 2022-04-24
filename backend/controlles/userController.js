@@ -8,9 +8,17 @@ const User = require("../models/user");
 //@access   Public
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
-  if (!name || !email || !password) {
+  if (
+    !name ||
+    !email ||
+    !password ||
+    !/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(
+      email
+    ) ||
+    password.length < 6
+  ) {
     res.status(400);
-    throw new Error("please add all fields");
+    throw new Error("please fill correctly all fields");
   }
   //Check if user exists
   const userExists = await User.findOne({ email });
